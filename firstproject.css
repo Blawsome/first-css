@@ -1,0 +1,136 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #fff;
+}
+
+nav {
+    width: 100%;
+    height: 100px;
+}
+
+nav p{
+    font-family: 'Cedarville Cursive', cursive;
+    background-color: #8b4513;
+    font-size: 50px;
+    color: #fff;
+    padding: 0px 20px;
+}
+
+nav ul {
+    float: left;
+    background-color: #333;
+    margin-top: 0;
+    list-style: none;
+    width: 100%;
+}
+
+nav ul li {
+    position: relative;
+    float: left;
+}
+
+nav ul li a {
+   display: inline-flex;
+   padding: 22px 14px;
+   text-decoration: none;
+   color: #fff;
+   font-size: 15px;
+   margin-left: 10px;
+}
+
+
+nav ul li ul {
+    display: none;
+    position: absolute;
+    background-color: #696969;
+    padding: 5px;
+    border-radius: 0px 0px 4px 4px; /* to give the sub-options a rounded edge */
+}
+
+nav ul li:hover ul {
+    display: block; /* to make those suboptions line up */
+}
+
+nav ul li ul li {
+    width: 180px;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+nav ul li ul li a {
+    padding: 8px 14px;
+}
+
+nav a:hover {
+    color: #a9a9a9;
+}
+
+nav ul li ul li a:hover {
+    background-color: #333;
+}
+
+nav ul li .fa-solid {
+    margin-right: 8px; /* for space between the icon and the text */
+}
+
+
+.column {
+    float: left;
+    padding: 11px;
+}
+
+.column.burger{
+    width: 50%;
+    margin-top: 20px;
+}
+
+.column.burger img {
+    margin-top: 10px; /* for space between the image and the corresponding text on top */
+}
+
+.column.middle {
+    margin-top: 20px;
+    width: 25%;
+}
+
+.column.side {
+    width: 25%;
+}
+
+.row::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.footer {
+    margin-top: 100px;
+    background-color: #f1f1f1;
+    padding: 10px;
+    text-align: center;
+}
+
+.footer li {
+    list-style-type: none;
+    display: inline;
+    margin-right: 10px; /* for distance between the icons */
+}
+
+.footer li a {
+    color: #000000;
+    display: inline;
+}
+
+.footer li a:hover {
+    color: #a9a9a9;
+}
+
+
+@media screen and (max-width:600px) {
+    .column.burger, .column.middle, .column.side {
+      width: 100%;
+    }
